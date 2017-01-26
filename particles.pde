@@ -26,7 +26,6 @@ import java.util.*;
           }
        }
 
-       println((int)frameRate);
       }
 
 
