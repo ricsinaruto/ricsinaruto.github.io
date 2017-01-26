@@ -4,7 +4,7 @@ import java.util.*;
       PFont f;
 
       void setup() {
-       size(1920,1080,P2D);
+       size(1600,900,P2D);
        frameRate(60);
        particles=new ArrayList<Particle>();
        f=createFont("Arial",20,true);
