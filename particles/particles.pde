@@ -1,16 +1,19 @@
 import java.util.*;
 
       ArrayList<Particle> particles;
+      PFont f;
 
       void setup() {
        size(1920,1080,P2D);
-       frameRate(1000);
+       frameRate(60);
        particles=new ArrayList<Particle>();
+       f=createFont("Arial",20,true);
       }
 
       float noiset=0;
       void draw() {
        background(0);
+      
        for (int i=0;i<5;i++) {
           particles.add(new Particle(new PVector(mouseX,mouseY),
          (int)map(noise(noiset),0,1,0,255),(int)map(noise(noiset+10000),0,1,0,255),(int)map(noise(noiset+100000),0,1,0,255)));
@@ -25,6 +28,9 @@ import java.util.*;
            it.remove();
           }
        }
+        textFont(f,20);
+        fill(255);
+        text((int)frameRate,10,30);
 
       }
 
