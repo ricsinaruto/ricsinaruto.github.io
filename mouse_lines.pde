@@ -151,16 +151,16 @@ class Mover {
    }
 }
 
-Mover[] movers =new Mover[6250];
+Mover[] movers =new Mover[1000];
 
 PVector location=new PVector(width/2,height/2);
 PVector velocity=new PVector(5,3);
 PVector acceleration=new PVector(0.01,0.01);
 
 void setup() {
-  size(1920,1080,P2D);
+  size(1920,1080);
   background(0);
-  frameRate(70);
+  
   float noiset=0;
   for (int i=0;i<movers.length;i++) {
     movers[i]=new Mover();
@@ -221,7 +221,7 @@ void draw() {
   
   t+=0.2;
   
-  surface.setTitle(int(frameRate) + " fps");
+ 
   
   
   
