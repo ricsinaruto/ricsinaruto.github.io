@@ -151,26 +151,31 @@ class Mover {
    }
 }
 
-Mover[] movers =new Mover[500];
+Mover[] movers =new Mover[2000];
 
 PVector location=new PVector(width/2,height/2);
 PVector velocity=new PVector(5,3);
 PVector acceleration=new PVector(0.01,0.01);
-
+PFont f;
 void setup() {
   size(1600,900,P2D);
   background(0);
-  frameRate(1000);
+  frameRate(60);
   float noiset=0;
   for (int i=0;i<movers.length;i++) {
     movers[i]=new Mover();
     movers[i].setColor((int)map(noise(noiset),0,1,0,255),(int)map(noise(noiset+10000),0,1,0,255),(int)map(noise(noiset+100000),0,1,0,255));
     noiset+=0.01;
   }
+  f=createFont("Arial",20,true);
 }
+
  float t=0;
 void draw() {
   background(0);
+  textFont(f,20);
+  fill(255);
+  text((int)frameRate,10,30);
   acceleration.x=(noise(t)-0.5)*1;
   acceleration.y=(noise(t+1000)-0.5)*1;
    velocity.add(acceleration);
@@ -223,7 +228,7 @@ void draw() {
   
  
   
-  println((int)frameRate);
+  
   
 }
 
