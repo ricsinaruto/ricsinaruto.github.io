@@ -151,7 +151,7 @@ class Mover {
    }
 }
 
-Mover[] movers =new Mover[2000];
+Mover[] movers =new Mover[500];
 
 PVector location=new PVector(width/2,height/2);
 PVector velocity=new PVector(5,3);
