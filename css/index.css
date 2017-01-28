@@ -21,34 +21,35 @@ body {
 h1 {
 	font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
  	font-size: 20px;
- 	padding: 80px 50px;
+ 	padding: 10px 10px;
     text-rendering: optimizeLegibility;
 
 	color: #ffffff;
-	text-align: center;
+	text-align: left;
+
     
     letter-spacing: .1em;
 
     text-shadow: 
       0 -1px 0 #fff, 
-      0 1px 1px #909090, 
-      1px 2px 1px #808020, 
-      1px 3px 1px #707070, 
-      2px 4px 1px #606060, 
-      2px 5px 1px #505050,  
-      3px 6px 1px #404040,  
-      3px 7px 1px #303030, 
-      4px 8px 1px #202020,  
-      4px 9px 1px #101010, 
-      5px 10px 1px #070707;
+      0 1px 1px rgba(150,150,150,0.9), 
+      1px 2px 1px rgba(90,90,90,0.8), 
+      1px 3px 1px rgba(60,60,60,0.7),  
+      2px 4px 1px rgba(45,45,45,0.6),  
+      2px 5px 1px rgba(35,35,35,0.5),  
+      3px 6px 1px rgba(27,27,27,0.4),   
+      3px 7px 1px rgba(18,18,18,0.3),  
+      4px 8px 1px rgba(13,13,13,0.2),  
+      4px 9px 1px rgba(10,10,10,0.1),  
+      5px 10px 1px rgba(0,0,0,0.0);
 }
 
 h2 {
 	font-family:"Book Antiqua", Antiqua, sans-serif;
-	font-size: 16px;
+	font-size: 14px;
 	color: #ffffff;
 	letter-spacing: .1em;
-	text-align: center;
+	text-align: left;
 }
 
 .main-container {
@@ -59,15 +60,22 @@ h2 {
 .fixer-container {
       float: left;
       position: relative;
-      left: 25%;
-      width:50%;
+      left: 20%;
+      width:60%;
 
     }
 
-.img-container {
+.left-container {
       float: left;
       position: relative;
       width:50%;
+     
+    }
+.right-container {
+      float: right;
+      position: relative;
+      width:49%;
+      left:1%;
      
     }
 
