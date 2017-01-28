@@ -5,11 +5,12 @@ li {
 }
 
 a {
-	color: #384d9e;
+	color: #FFFFFF;
 	text-decoration: none;
 }
 
 a:hover {
+	color: #384d9e;
 	text-decoration: underline;
 }
 
@@ -20,8 +21,8 @@ body {
 
 h1 {
 	font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
- 	font-size: 20px;
- 	padding: 10px 10px;
+ 	font-size: 22px;
+ 	
     text-rendering: optimizeLegibility;
 
 	color: #ffffff;
@@ -46,7 +47,14 @@ h1 {
 
 h2 {
 	font-family:"Book Antiqua", Antiqua, sans-serif;
-	font-size: 14px;
+	font-size: 16px;
+	color: #ffffff;
+	letter-spacing: .1em;
+	text-align: left;
+}
+h3 {
+	font-family:"Book Antiqua", Antiqua, sans-serif;
+	font-size: 12px;
 	color: #ffffff;
 	letter-spacing: .1em;
 	text-align: left;
