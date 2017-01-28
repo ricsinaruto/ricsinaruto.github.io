@@ -151,7 +151,7 @@ class Mover {
    }
 }
 
-Mover[] movers =new Mover[500];
+Mover[] movers =new Mover[300];
 
 PVector location=new PVector(width/2,height/2);
 PVector velocity=new PVector(5,3);
@@ -232,7 +232,7 @@ void draw() {
   
 }
 
-void mousePressed() {
+void keyPressed() {
   for (int i=0;i<movers.length;i++) {
   movers[i].switcher();
   }
