@@ -1,0 +1,73 @@
+
+
+li {
+	display: inline;
+}
+
+a {
+	color: #384d9e;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+body {
+	background-image:url("../img/particles.jpg");
+}
+
+
+h1 {
+	font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+ 	font-size: 20px;
+ 	padding: 80px 50px;
+    text-rendering: optimizeLegibility;
+
+	color: #ffffff;
+	text-align: center;
+    
+    letter-spacing: .1em;
+
+    text-shadow: 
+      0 -1px 0 #fff, 
+      0 1px 1px #909090, 
+      1px 2px 1px #808020, 
+      1px 3px 1px #707070, 
+      2px 4px 1px #606060, 
+      2px 5px 1px #505050,  
+      3px 6px 1px #404040,  
+      3px 7px 1px #303030, 
+      4px 8px 1px #202020,  
+      4px 9px 1px #101010, 
+      5px 10px 1px #070707;
+}
+
+h2 {
+	font-family:"Book Antiqua", Antiqua, sans-serif;
+	font-size: 16px;
+	color: #ffffff;
+	letter-spacing: .1em;
+	text-align: center;
+}
+
+.main-container {
+      float: left;
+      position: relative;
+      
+    }
+.fixer-container {
+      float: left;
+      position: relative;
+      left: 25%;
+      width:50%;
+
+    }
+
+.img-container {
+      float: left;
+      position: relative;
+      width:50%;
+     
+    }
+
