@@ -4,13 +4,13 @@ li {
 	display: inline;
 }
 
+
 a {
-	color: #9bddff;
+	color: #684148;
 	text-decoration: none;
 }
-
 a:hover {
-	color: #384d9e;
+	
 	text-decoration: underline;
 }
 
@@ -25,7 +25,7 @@ head {
 
 
 h1 {
-	font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+	font-family: "League Gothic", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
  	font-size: 22px;
  	
     text-rendering: optimizeLegibility;
@@ -49,6 +49,33 @@ h1 {
       7px 15px 1px rgba(13,13,13,0.2),  
       8px 17px 1px rgba(10,10,10,0.1),  
       9px 19px 1px rgba(0,0,0,0.0);
+}
+
+h5 {
+	font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+ 	font-size: 26px;
+ 	
+    text-rendering: optimizeLegibility;
+
+	text-transform:bold;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+    
+    letter-spacing: .1em;
+
+    
+}
+h2 {
+	font-family:  "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+ 	letter-spacing: .2em;
+ 	line-height: 1.1em;
+	margin:0px;
+        
+	font-size: 18px;
+	text-rendering: optimizeLegibility;
+	text-align: left;
+	padding-bottom:10px;
 }
 
 
@@ -105,21 +132,7 @@ h1 {
       9px 19px 1px rgba(0,0,0,0.0);
 }
 
-h2 {
-	font-family:  'Hoefler Text', Georgia, 'Times New Roman', serif;
- 	font-weight: normal;
-        
-	letter-spacing: .2em;
- 	line-height: 1.1em;
-	margin:0px;
-	
-	font-size: 18px;
-	text-rendering: optimizeLegibility;
-	color: #ffffff;
-	
-	text-align: left;
-	padding-bottom:10px;
-}
+
 h3 {
 	font-family:  'Hoefler Text', Georgia, 'Times New Roman', serif;
  	font-weight: normal;
@@ -131,7 +144,8 @@ h3 {
 	font-size: 14px;
 	text-rendering: optimizeLegibility;
 	color: #ffffff;
-	padding-bottom:30px;
+	padding-bottom:50px;
+	padding-right:50px;
 	
 	text-align: left;
 }
@@ -154,6 +168,7 @@ h3 {
 
 	text-shadow: 1px 1px 0px rgba(0,0,0,0.9);
 }
+
 
 .main-container {
       float: left;
@@ -201,19 +216,27 @@ h3 {
       
       width:20%;
       font-size: 0;
-      padding-top: 10%;
+     
      
     }
 .padding {
+	padding-bottom: 20px;
+}
+.paddinglul {
 	padding-bottom: 20px;
 }
 .paddingpx {
 	padding-bottom: 21px;
 }
 
+img:hover {
+	opacity:0.7;
+}
 
-
-
+.paddinglul:hover {
+	padding-bottom: 20px;
+	opacity:1;
+}
 
 
 
