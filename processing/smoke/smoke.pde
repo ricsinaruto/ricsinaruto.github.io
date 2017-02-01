@@ -21,7 +21,7 @@ void setup() {
 
  float noiset=0;
 void draw() {
-   //blendMode(ADD);
+   blendMode(ADD);
   background(0);
   /*for (int i=0;i<15;i++) {
     particles.add(new Particle(new PVector(mouseX,mouseY),
