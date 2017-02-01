@@ -1,5 +1,5 @@
 import java.util.*; 
-@pjs preload="data/particleTexture.png";
+/* @pjs preload="data/particleTexture.png"; */
 
 PImage img;
  PFont f;
