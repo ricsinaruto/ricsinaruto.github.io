@@ -6,10 +6,10 @@ ArrayList<ParticleSystem> systems;
 Repeller repeller;
 
 void setup() {
-  size(1600,900);
+  size(1600,900,P2D);
   frameRate(60);
   f=createFont("Arial",20,true);
-  img=loadImage("particleTexture.png");
+  img=loadImage("data/particleTexture.png");
   systems = new ArrayList<ParticleSystem>();
   repeller=new Repeller(width/2,height/2);
   systems.add(new ParticleSystem(new PVector(mouseX,mouseY),(int)random(255),(int)random(255),(int)random(255)));
