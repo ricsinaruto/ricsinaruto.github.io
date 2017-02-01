@@ -1,5 +1,5 @@
 
-/* @pjs preload="particleTexture.png" */
+/* @pjs preload="particleTexture.png"; */
 import java.util.*; 
 
 PImage img;
@@ -9,7 +9,7 @@ ArrayList<ParticleSystem> systems;
 Repeller repeller;
 
 void setup() {
-  size(1600,900,P2D);
+  size(1600,900,JAVA2D);
   frameRate(60);
   f=createFont("Arial",20,true);
   img=loadImage("particleTexture.png");
