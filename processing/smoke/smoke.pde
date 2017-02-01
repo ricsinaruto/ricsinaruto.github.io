@@ -1,5 +1,6 @@
 import java.util.*; 
 PImage img;
+ PFont f;
 
 ArrayList<ParticleSystem> systems;
 Repeller repeller;
@@ -7,6 +8,7 @@ Repeller repeller;
 void setup() {
   size(1600,900,P2D);
   frameRate(60);
+  f=createFont("Arial",20,true);
   img=loadImage("particleTexture.png");
   systems = new ArrayList<ParticleSystem>();
   repeller=new Repeller(width/2,height/2);
@@ -40,7 +42,9 @@ void draw() {
   
   //repeller.display();
 
-  surface.setTitle(int(frameRate) + " fps");
+   textFont(f,20);
+   fill(255);
+   text((int)frameRate,10,30);
 }
 
 class Repeller {
