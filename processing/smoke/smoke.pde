@@ -18,8 +18,8 @@ void setup() {
 
  float noiset=0;
 void draw() {
-  blendMode(ADD);
-  background(30);
+ // blendMode(ADD);
+  background(0);
   /*for (int i=0;i<15;i++) {
     particles.add(new Particle(new PVector(mouseX,mouseY),
     (int)map(noise(noiset),0,1,0,255),(int)map(noise(noiset+10000),0,1,0,255),(int)map(noise(noiset+100000),0,1,0,255)));
