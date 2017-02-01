@@ -9,7 +9,7 @@ ArrayList<ParticleSystem> systems;
 Repeller repeller;
 
 void setup() {
-  size(1600,900,JAVA2D);
+  size(1600,900,P2D);
   frameRate(60);
   f=createFont("Arial",20,true);
   img=loadImage("particleTexture.png");
