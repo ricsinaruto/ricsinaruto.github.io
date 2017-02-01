@@ -3,7 +3,7 @@
 PImage img;
 
 void setup() {
-  size(1600,900,JAVA2D);
+  size(1600,900,P2D);
   frameRate(60);
   
   img=loadImage("particleTexture.png");
