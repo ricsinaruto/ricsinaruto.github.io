@@ -47,7 +47,7 @@ $(function() {
 
 		hist = history.slice(-utts).join(':::');
 		//alert(hist);
-	  const response = await fetch('http://hlt.bme.hu/4lang/chatbotapi', {
+	  const response = await fetch('http://hlt.bme.hu/4lang/vegpont', {
 	    method: 'POST',
 	    body: JSON.stringify({"history": hist, "language": language, "model":model, "code": client_code}), // string or object
 	    headers: {
