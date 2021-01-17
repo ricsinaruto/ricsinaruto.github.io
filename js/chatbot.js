@@ -48,6 +48,7 @@ $(function() {
 		//alert(hist);
 	  	const response = await fetch('https://hlt.bme.hu/4lang/vegpont', {
 	    	method: 'POST',
+	    	mode: 'cors',
 	    	body: JSON.stringify({"history": hist, "language": language, "model":model, "code": client_code}), // string or object
 	    	headers: {
 	      	'Content-Type': 'application/json'
