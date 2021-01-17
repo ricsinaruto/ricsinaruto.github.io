@@ -7,8 +7,7 @@ $(function() {
 	var old_lang = '';
 	var history = [];
 	
-	// slow reply by 400 to 800 ms
-  var d = new Date()
+  	var d = new Date()
 	var client_code = d.getTime() + Math.random()
 	
 	// initialize
@@ -20,24 +19,24 @@ $(function() {
 	var submitChat = async() => {
 		var language = $('.lang select').val();
 		var model = $('.model select').val();
-    var utts = $('.history select').val();
+    	var utts = $('.history select').val();
 
 
-    if ((language != old_lang || model != old_data) && utts != 1 && old_lang != '') {
-    	old_lang = language;
-    	old_data = model;
-    	alert('You are changing the chatbot model. Consider setting history size to 1, so that the new chatbot doesn\'t see the previous conversation. Don\'t forget to set back the history size to the desired value on your next turn or later.');
-    	return;
-    }
+	    if ((language != old_lang || model != old_data) && utts != 1 && old_lang != '') {
+	    	old_lang = language;
+	    	old_data = model;
+	    	alert('You are changing the chatbot model. Consider setting history size to 1, so that the new chatbot doesn\'t see the previous conversation. Don\'t forget to set back the history size to the desired value on your next turn or later.');
+	    	return;
+	    }
 
 
 		var input = $('.input input').val();
 		if(input == '') return;
 		$('.busy').css('display', 'block');
 
-    document.getElementById("btn").disabled = true;
-    document.getElementById("text_input").disabled = true;
-    input = input.slice(0,1000);
+    	document.getElementById("btn").disabled = true;
+    	document.getElementById("text_input").disabled = true;
+    	input = input.slice(0,1000);
 		
 		$('.input input').val('');
 		updateChat(you, input);
@@ -47,27 +46,27 @@ $(function() {
 
 		hist = history.slice(-utts).join(':::');
 		//alert(hist);
-	  const response = await fetch('http://hlt.bme.hu/4lang/vegpont', {
-	    method: 'POST',
-	    body: JSON.stringify({"history": hist, "language": language, "model":model, "code": client_code}), // string or object
-	    headers: {
-	      'Content-Type': 'application/json'
-	    }
-	  });
-	  var reply = await response.text(); //extract JSON from the http response
-	  history.push(reply);
-	  // do something with myJson
-	  //if(reply == null) return;
-	  $('.busy').css('display', 'none');
-	  updateChat(robot, reply);
+	  	const response = await fetch('https://hlt.bme.hu/4lang/vegpont', {
+	    	method: 'POST',
+	    	body: JSON.stringify({"history": hist, "language": language, "model":model, "code": client_code}), // string or object
+	    	headers: {
+	      	'Content-Type': 'application/json'
+	    	}
+	  	});
+		var reply = await response.text(); //extract JSON from the http response
+		history.push(reply);
+		// do something with myJson
+		//if(reply == null) return;
+		$('.busy').css('display', 'none');
+		updateChat(robot, reply);
 
-    document.getElementById("btn").disabled = false;
-    document.getElementById("text_input").disabled = false;
+    	document.getElementById("btn").disabled = false;
+    	document.getElementById("text_input").disabled = false;
 
-    document.getElementById("text_input").focus();
+    	document.getElementById("text_input").focus();
 
-    old_data = model;
-    old_lang = language;
+    	old_data = model;
+    	old_lang = language;
 
 	}
 	
