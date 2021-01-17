@@ -1,0 +1,117 @@
+$(function() {
+
+	// chat aliases
+	var you = 'You';
+	var robot = 'GPT2';
+	var old_data = '';
+	var old_lang = '';
+	var history = [];
+	
+	// slow reply by 400 to 800 ms
+  var d = new Date()
+	var client_code = d.getTime() + Math.random()
+	
+	// initialize
+	var chat = $('.chat');
+	var waiting = 0;
+	$('.busy').text(robot + ' is typing...');
+	
+	// submit user input and get chat-bot's reply
+	var submitChat = async() => {
+		var language = $('.lang select').val();
+		var model = $('.model select').val();
+    var utts = $('.history select').val();
+
+
+    if ((language != old_lang || model != old_data) && utts != 1 && old_lang != '') {
+    	old_lang = language;
+    	old_data = model;
+    	alert('You are changing the chatbot model. Consider setting history size to 1, so that the new chatbot doesn\'t see the previous conversation. Don\'t forget to set back the history size to the desired value on your next turn or later.');
+    	return;
+    }
+
+
+		var input = $('.input input').val();
+		if(input == '') return;
+		$('.busy').css('display', 'block');
+
+    document.getElementById("btn").disabled = true;
+    document.getElementById("text_input").disabled = true;
+    input = input.slice(0,1000);
+		
+		$('.input input').val('');
+		updateChat(you, input);
+		history.push(input);
+
+		
+
+		hist = history.slice(-utts).join(':::');
+		//alert(hist);
+	  const response = await fetch('http://hlt.bme.hu/4lang/chatbotapi', {
+	    method: 'POST',
+	    body: JSON.stringify({"history": hist, "language": language, "model":model, "code": client_code}), // string or object
+	    headers: {
+	      'Content-Type': 'application/json'
+	    }
+	  });
+	  var reply = await response.text(); //extract JSON from the http response
+	  history.push(reply);
+	  // do something with myJson
+	  //if(reply == null) return;
+	  $('.busy').css('display', 'none');
+	  updateChat(robot, reply);
+
+    document.getElementById("btn").disabled = false;
+    document.getElementById("text_input").disabled = false;
+
+    document.getElementById("text_input").focus();
+
+    old_data = model;
+    old_lang = language;
+
+	}
+	
+	// add a new line to the chat
+	var updateChat = function(party, text) {
+	
+		var style = 'you';
+		if(party != you) {
+			style = 'other';
+		}
+		
+		var line = $('<div><span class="party"></span> <span class="text"></span></div>');
+		line.find('.party').addClass(style).text(party + ':');
+		line.find('.text').text(text);
+		
+		chat.append(line);
+		
+		chat.stop().animate({ scrollTop: chat.prop("scrollHeight")});
+	
+	}
+
+	
+	// event binding
+	$('.input').bind('keydown', function(e) {
+		if(e.keyCode == 13) {
+			submitChat();
+		}
+	});
+	$('.input a').bind('click', submitChat);
+
+	document.getElementById("models").onchange = function () {
+		model = $('.model select').val();
+		if (model != 'gutenberg' && model != 'opensubtitles') {
+			document.getElementById("langs").value = 'en';
+			document.getElementById("langs").disabled = true;
+		}
+		else {
+			document.getElementById("langs").disabled = false;
+		}
+
+	}
+
+	
+	// initial chat state
+	updateChat(robot, 'Hi there, please select a language and dataset. History size controls the number of previous exchanges the chatbot sees. Gutenberg\'s genre is older books, Opensubtitles\'s is movie subtitles, the other two (only available in English) are chit-chat. \nDISCLAIMER: Conversations recorded for research purposes.');
+
+});
