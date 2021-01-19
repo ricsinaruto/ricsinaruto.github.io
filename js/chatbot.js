@@ -112,6 +112,6 @@ $(function() {
 
 	
 	// initial chat state
-	updateChat(robot, 'Hi there, please select a language and dataset. History size controls the number of previous exchanges the chatbot sees. Gutenberg\'s genre is older books, Opensubtitles\'s is movie subtitles, the other two (only available in English) are chit-chat.');
+	updateChat(robot, 'Hi there, please select a language and dataset. History size controls the number of previous exchanges the chatbot sees. Gutenberg\'s genre is older books, Opensubtitles\'s is movie subtitles, the other two (only available in English) are chit-chat. For more information see the links at the top of the page.');
 
 });
