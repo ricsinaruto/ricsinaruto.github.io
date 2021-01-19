@@ -12,7 +12,6 @@ $(function() {
 	
 	// initialize
 	var chat = $('.chat');
-	var waiting = 0;
 	$('.busy').text(robot + ' is typing...');
 	
 	// submit user input and get chat-bot's reply
@@ -36,7 +35,7 @@ $(function() {
 
     	document.getElementById("btn").disabled = true;
     	document.getElementById("text_input").disabled = true;
-    	input = input.slice(0,1000);
+    	input = input.slice(0,500);
 		
 		$('.input input').val('');
 		updateChat(you, input);
@@ -61,14 +60,12 @@ $(function() {
 		$('.busy').css('display', 'none');
 		updateChat(robot, reply);
 
-    	document.getElementById("btn").disabled = false;
-    	document.getElementById("text_input").disabled = false;
-
-    	document.getElementById("text_input").focus();
-
-    	old_data = model;
+		old_data = model;
     	old_lang = language;
 
+    	document.getElementById("btn").disabled = false;
+    	document.getElementById("text_input").disabled = false;
+    	document.getElementById("text_input").focus();
 	}
 	
 	// add a new line to the chat
@@ -113,5 +110,6 @@ $(function() {
 	
 	// initial chat state
 	updateChat(robot, 'Hi there, please select a language and dataset. History size controls the number of previous exchanges the chatbot sees. Gutenberg\'s genre is older books, Opensubtitles\'s is movie subtitles, the other two (only available in English) are chit-chat. For more information see the links at the top of the page.');
+	updateChat(robot, 'DISCLAIMER: Conversations are recorded for research purposes.');
 
 });
