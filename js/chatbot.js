@@ -36,6 +36,7 @@ $(function() {
     	document.getElementById("btn").disabled = true;
     	document.getElementById("text_input").disabled = true;
     	input = input.slice(0,500);
+    	input = input.replace(':', '');
 		
 		$('.input input').val('');
 		updateChat(you, input);
@@ -44,7 +45,6 @@ $(function() {
 		
 
 		hist = history.slice(-utts).join(':::');
-		//alert(hist);
 	  	const response = await fetch('https://hlt.bme.hu/4lang/vegpont', {
 	    	method: 'POST',
 	    	mode: 'cors',
