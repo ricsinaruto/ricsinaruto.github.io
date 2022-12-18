@@ -89,16 +89,17 @@
     <section id="banner" class="wow fadeInUp">
       <div class="container">
         <div class="row">
-          <div class="col-md-4  col-sm-6">
+          <div style="display: flex; align-items: center;">
+          <div class="col-md-4 col-sm-6">
             <div class="block">
-
-              <img src="images/allatkert.jpg" height="400px">
+              <div style="overflow: hidden; border-radius: 50%; width: 400px; height: 400px;">
+                <img src="images/allatkert.jpg" style="position: relative; top: 50%; transform: translateY(-50%); width: 100%;">
+              </div>
             </div>
-            
           </div>
           <div class="col-md-6 col-md-offset-1 col-sm-6">
             <div class="block">
-              <h2> AI + Neuroscience PhD @ <a target="_blank" href="https://www.psych.ox.ac.uk/team/richard-csaky-1"><strong>Oxford</strong></a></h2>
+              <h2> Machine Learning + Neuroscience <br> PhD @ <a target="_blank" href="https://www.psych.ox.ac.uk/team/richard-csaky-1"><strong>Oxford</strong></a></h2>
               <p>
                 I analyse, model, and decode EEG/MEG signals and develop novel deep learning approaches for such data under the supervision of
                 <a target="_blank" href="https://www.psych.ox.ac.uk/team/mark-woolrich">Mark Woolrich</a>.
@@ -132,6 +133,7 @@
             </div>
           </div>
         </div>
+        </div>
       </div>
     </section>
 
@@ -142,6 +144,61 @@
             <h2 class="title"><strong>Projects</strong></h2>
             <br><br>
             <div class="col-md-4 col-sm-8">
+              <a target="_blank" href="https://github.com/ricsinaruto/MEG-group-decode" style="text-decoration: none;">
+                <div class="block wow fadeInRight" data-wow-delay="0.6s">
+                  <div class="icon">
+                    <i class="fa fa-cloud"></i>
+                  </div>
+                  <h3>Group-level Brain Decoding</h3>
+                  <img src="images/animation.gif" height="180px">
+                  <br><br>
+                  <p>
+                    Train Wavenet-based group-level models on MEG data, and uncover neuroscientifically interpretable information.
+                  </p>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-md-4 col-sm-8">
+              <a target="_blank" href="https://ricsinaruto.github.io/chatbot.html" style="text-decoration: none;">
+                <div class="block wow fadeInRight" data-wow-delay="0.9s">
+                  <div class="icon">
+                    <i class="fa fa-comments"></i>
+                  </div>
+                  <h3>Gutenberg Chatbot</h3>
+                  <img src="images/chatbot.png" height="180px">
+                  <br><br>
+                  <p>
+                    An online chatbot using a state-of-the-art neural network (GPT2) trained on 5 different languages and various datasets.
+                  </p>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-md-4 col-sm-8">
+              <a target="_blank" href="https://github.com/ricsinaruto/gutenberg-dialog" style="text-decoration: none;">
+                <div class="block wow fadeInRight" data-wow-delay="1.2s">
+                  <div class="icon">
+                    <i class="fa fa-book"></i>
+                  </div>
+                  <h3>Gutenberg Dialogue Dataset</h3>
+                  <img src="images/gutenberg.png" height="180px">
+                  <br><br>
+                  <p>
+                    An open-source pipeline for building dialogue datasets in many languages using books from Project Gutenberg.
+                  </p>
+                </div>
+              </a>
+            </div>
+
+            
+              
+            
+         </div>
+          <div class="row">
+            
+            <br><br>
+            <div class="col-md-4 col-sm-6">
               <a target="_blank" href="https://github.com/ricsinaruto/Seq2seqChatbots" style="text-decoration: none;">
                 <div class="block wow fadeInRight" data-wow-delay="0.6s">
                   <div class="icon">
@@ -157,7 +214,7 @@
                 </div>
             </div>
 
-            <div class="col-md-4 col-sm-8">
+            <div class="col-md-4 col-sm-6">
               <a target="_blank" href="https://github.com/ricsinaruto/NeuralChatbots-DataFiltering" style="text-decoration: none;">
                 <div class="block wow fadeInRight" data-wow-delay="0.9s">
                   <div class="icon">
@@ -173,7 +230,7 @@
               </a>
             </div>
 
-            <div class="col-md-4 col-sm-8">
+            <div class="col-md-4 col-sm-6">
               <a target="_blank" href="https://github.com/ricsinaruto/dialog-eval" style="text-decoration: none;">
                 <div class="block wow fadeInRight" data-wow-delay="1.2s">
                   <div class="icon">
@@ -190,43 +247,13 @@
             </div>
           </div>
 
-          <div class="row">
-            <br><br>
-            <div class="col-md-4 col-sm-6">
-              <a target="_blank" href="https://ricsinaruto.github.io/chatbot.html" style="text-decoration: none;">
-                <div class="block wow fadeInRight" data-wow-delay="0.6s">
-                  <div class="icon">
-                    <i class="fa fa-comments"></i>
-                  </div>
-                  <h3>Gutenberg Chatbot</h3>
-                  <img src="images/chatbot.png" height="180px">
-                  <br><br>
-                  <p>
-                    An online chatbot using a state-of-the-art neural network (GPT2) trained on 5 different languages and various datasets.
-                  </p>
-                </div>
-              </a>
-            </div>
+          
 
-            <div class="col-md-4 col-sm-6">
-              <a target="_blank" href="https://github.com/ricsinaruto/gutenberg-dialog" style="text-decoration: none;">
-                <div class="block wow fadeInRight" data-wow-delay="0.9s">
-                  <div class="icon">
-                    <i class="fa fa-book"></i>
-                  </div>
-                  <h3>Gutenberg Dialogue Dataset</h3>
-                  <img src="images/gutenberg.png" height="180px">
-                  <br><br>
-                  <p>
-                    An open-source pipeline for building dialogue datasets in many languages using books from Project Gutenberg.
-                  </p>
-                </div>
-              </a>
-            </div>
-
-            <div class="col-md-4 col-sm-6">
+           <div class="row">
+           	<br><br>
+             <div class="col-md-4 col-sm-6">
               <a target="_blank" href="https://github.com/ricsinaruto/ProteinStructureSearch-Simulation" style="text-decoration: none;">
-                <div class="block wow fadeInRight" data-wow-delay="1.2s">
+                <div class="block wow fadeInRight" data-wow-delay="0.6s">
                   <div class="icon">
                     <i class="fa fa-cube"></i>
                   </div>
@@ -239,15 +266,10 @@
                   </p>
                 </div>
             </div>
-              
-            
-         </div>
 
-           <div class="row">
-           	<br><br>
            	<div class="col-md-4 col-sm-6">
               <a target="_blank" href="https://github.com/ricsinaruto/Processing-sketches" style="text-decoration: none;">
-                <div class="block wow fadeInRight" data-wow-delay="0.6s">
+                <div class="block wow fadeInRight" data-wow-delay="0.9s">
                   <div class="icon">
                     <i class="fa fa-rocket"></i>
                   </div>
@@ -262,7 +284,7 @@
             </div>
             <div class="col-md-4 col-sm-6">
               <a target="_blank" href="https://github.com/ricsinaruto/Platformer-game" style="text-decoration: none;">
-                <div class="block wow fadeInRight" data-wow-delay="0.9s">
+                <div class="block wow fadeInRight" data-wow-delay="1.2s">
                   <div class="icon">
                     <i class="fa fa-gamepad"></i>
                   </div>
@@ -287,6 +309,21 @@
           <div class="col-md-6 col-sm-6 wow fadeInRight" data-wow-delay=".8s">
             <h2 class="title"><strong>Papers</strong> </h2>
 
+            <div class="feature-item">
+              <div class="media">
+                <div class="pull-left icon" href="#">
+                  <i class="fa fa-file-text"></i>
+                </div>
+                <div class="media-body">
+                  <h4 class="media-heading"> Generalizing Brain Decoding Across Subjects with Deep Learning</h4>
+      <p>arXiv (2022)</p>
+      <p><strong>Richard Csaky</strong>, Mats W.J. van Es, Oiwi Parker Jones, Mark Woolrich</p>
+      <p><i></i></p>
+      <p><a target="_blank" href="https://arxiv.org/pdf/2205.14102.pdf">[Paper]</a>
+        <a target="_blank" href="https://ricsinaruto.github.io/docs/ohbm_poster.pdf">[Poster]</a></p>
+                </div>
+              </div>
+            </div>  
 
             <div class="feature-item">
               <div class="media">
@@ -381,7 +418,53 @@
 	    <div class="col-md-6 col-sm-6 wow fadeInRight" data-wow-delay=".8s">
 	            <h2 class="title"><strong>Presentations</strong> </a></h2>
 
+              <div class="feature-item">
+                <div class="media">
+                  <div class="pull-left icon" href="#">
+                    <i class="fa fa-microphone"></i>
+                  </div>
+                  <div class="media-body">
+                     <a target="_blank" href="https://biomag2020.org/"><h4 class="media-heading">Biomag 2022</h4></a>
+        <p><small>August 2022</small></p>
+        <p>Generalizing Brain Decoding Across Subjects with
+          Deep Learning</p>
+        <p><i></i></p>
+        <p><a target="_blank" href="https://ricsinaruto.github.io/docs/ohbm_poster.pdf">[Poster]</a></p>
+                  </div>
+                </div>
+              </div>
 
+              <div class="feature-item">
+                <div class="media">
+                  <div class="pull-left icon" href="#">
+                    <i class="fa fa-microphone"></i>
+                  </div>
+                  <div class="media-body">
+                     <a target="_blank" href="https://www.humanbrainmapping.org/i4a/pages/index.cfm?pageid=4118"><h4 class="media-heading">OHBM 2022</h4></a>
+        <p><small>June 2022</small></p>
+        <p>Generalizing Brain Decoding Across Subjects with
+          Deep Learning</p>
+        <p><i></i></p>
+        <p><a target="_blank" href="https://ricsinaruto.github.io/docs/ohbm_poster.pdf">[Poster]</a></p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="feature-item">
+                <div class="media">
+                  <div class="pull-left icon" href="#">
+                    <i class="fa fa-microphone"></i>
+                  </div>
+                  <div class="media-body">
+                     <a target="_blank" href="https://corticodays.sciencesconf.org/resource/page/id/6"><h4 class="media-heading">Cortico 2022</h4></a>
+        <p><small>March 2022</small></p>
+        <p>Generalizing Brain Decoding Across Subjects with
+          Deep Learning</p>
+        <p><i></i></p>
+        <p><a target="_blank" href="https://ricsinaruto.github.io/docs/ohbm_poster.pdf">[Poster]</a></p>
+                  </div>
+                </div>
+              </div>
 	            
 	           <div class="feature-item">
               <div class="media">
@@ -519,12 +602,34 @@
 
           <br>
 
+        <li>
+          <h3 class="media-heading">Jul 2022 - Current<br>
+          Neuroscientist @ Stealth Startup</h3>
+          <h4>I am a former co-founder and current neuroscientist at a BCI stealth startup.</h4>
+        </li>
+  
+          <br>
+
 
       <li>
-        <h3 class="media-heading">Oct 2020 - Sep 2023<br>
-        PhD in AI + Computational Neuroscience @ University of Oxford</h3>
-        <h4><a target="_blank" href="https://www.psych.ox.ac.uk/team/richard-csaky-1/">https://www.psych.ox.ac.uk/team/richard-csaky-1/</a></h4>
+        <h3 class="media-heading">Oct 2020 - Oct 2023<br>
+        PhD in Machine Learning + Neuroscience @ University of Oxford</h3>
+        <h4><a target="_blank" href="https://www.psych.ox.ac.uk/team/richard-csaky-1/">https://www.psych.ox.ac.uk/team/richard-csaky-1/</a><br>
+          I am a third-year DPhil student supervised by Mark Woolrich at the Oxford Centre for Human Brain Activity. My research sits at the intersection of machine learning and neuroscience. I analyse, model, and decode EEG and MEG data using standard signal processing and machine learning techniques. I also develop novel deep learning approaches for such data. I am especially interested in decoding language (e.g. reading / inner speech), and potential applications in brain-computer interfaces (BCI). I am also more and more interested in novel invasive/noninvasive BCI technologies.
+          
+          <br><br>My research spans several topics.
+          <br>1. Improving supervised/unsupervised group-level models of M/EEG data by dealing with between-subject variability.
+          
+          <br>2. Analysing how deep learning can be leveraged for decoding M/EEG data primarily from visual tasks.
+          
+          <br>3. Developing deep (transfer) learning models for simultaneous forecasting and stimulus decoding from M/EEG data.
+          
+          <br>4. Collecting a high number of trials of both EEG and MEG data from a few participants doing a reading and inner speech task. Analysing this data with the decoding methods mentioned above.
+          
+          </h4>
       </li>
+
+      <br>
 
       <li>
         <h3 class="media-heading">Feb 2020 - Jun 2020<br>
